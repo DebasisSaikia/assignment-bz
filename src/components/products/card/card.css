@@ -1,0 +1,60 @@
+.card-content{
+width: 154px;
+height: 145px;
+background: #F4F4F8;
+border-radius: 12px;
+}
+
+.product-details{
+    position: relative;
+    top: -30%;
+    text-align: center;
+}
+.product-details img{
+    object-fit: contain;
+}
+.product-details p{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 16px;
+letter-spacing: -0.03em;
+
+color: #414044;
+}
+
+.product-details span{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 16px;
+letter-spacing: -0.05em;
+
+color: #F7C390;
+}
+.card-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* gap: 1rem; */
+    column-gap: 1rem;
+    /* row-gap: 4rem; */
+}
+.card-content:nth-child(odd){
+    margin-top: 4rem;
+}
+.product-img{
+    animation: imgbounce 0.8s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes imgbounce {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(0, -10px, 0);
+    }
+  }

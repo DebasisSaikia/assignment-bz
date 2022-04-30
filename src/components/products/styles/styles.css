@@ -1,0 +1,15 @@
+
+.product-container{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+.heading{
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 28px;
+line-height: 28px;
+letter-spacing: -0.04em;
+color: #171B24;
+}

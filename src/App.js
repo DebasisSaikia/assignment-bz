@@ -1,23 +1,31 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+import { carousalImages, productImages } from './assets/data';
+import Carousal from './components/carousal';
+import Loader from './components/loader';
+import Products from './components/products';
+import Layout from './layout';
 
 function App() {
+  const [loading,setLoading]=React.useState(false);
+
+  React.useEffect(()=>{
+    setLoading(true)
+    setTimeout(()=>{
+      setLoading(false)
+    },3000)
+  },[])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Layout loading={loading}>
+        {loading?<Loader/>:
+        <>
+        <Carousal sliderImages={carousalImages}/>
+        <Products productImages={productImages}/>
+        </>
+        }
+       
+      </Layout>
     </div>
   );
 }
